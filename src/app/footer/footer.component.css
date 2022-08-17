@@ -1,0 +1,32 @@
+.facebook {
+  color: #3d5b99;
+}
+.twitter {
+  color: #35cdff;
+}
+.instagram {
+  color: #30618a;
+}
+.linkedin {
+  color: #0a66c2;
+}
+.facebook:hover a {
+  background-color: #3d5b99;
+}
+a {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 20%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.horizontal-line {
+  width: 80%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.2);
+  margin: auto;
+}
