@@ -15,7 +15,6 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.coronaApi = this._CoronaVirusReportsService.getReports().subscribe(
       (response) => {
-        console.log(response.Countries);
         for (let i = 0; i < response.Countries.length; i++) {
           this.values[response.Countries[i].CountryCode] = {
             totalConfirmedCases: response.Countries[i].TotalConfirmed,
@@ -51,5 +50,8 @@ export class HomeComponent implements OnInit {
         console.log(error);
       }
     );
+  }
+  ngOnDestroy(): void {
+    this.coronaApi.unsubscribe();
   }
 }
